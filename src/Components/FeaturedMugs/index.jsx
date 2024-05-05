@@ -17,11 +17,14 @@ const FeaturedMugs = () => {
       <h5 className="font-normal text-[12px] leading-[18px] tracking-[2px] uppercase pb-[5%]">
         Featured Mugs
       </h5>
-      <div className="flex gap-3">
+      <div className="flex flex-wrap gap-7 justify-center items-center">
         {products.map(({ id, imgUrl, name, price, lastPrice }) => (
           <div key={id} className="text-center">
             <Link to={`singlepage/${id}`}>
-              <img width="460px" height="540px" src={imgUrl} />
+              <img
+                className="w-[305px] h-[250px] md:w-[460px] md:h-[480px] lg:w-[460px] lg:h-[480px] hover:text-secondry transform translate-x-0 duration-300 hover:scale-105"
+                src={imgUrl}
+              />
             </Link>
             <h1 className="font-normal text-[20px] leading-[30px] pt-5  ">
               {name}

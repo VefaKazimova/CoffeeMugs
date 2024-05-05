@@ -20,7 +20,11 @@ const Products = () => {
         {filteredProducts.map(({ id, imgUrl, name, price }) => (
           <div key={id}>
             <Link to={`/singlepage/${id}`}>
-              <img width="305px" height="380px" src={imgUrl} alt={name} />
+              <img
+                className="w-[305px] h-[340px] hover:text-secondry transform translate-x-0 duration-300 hover:scale-105"
+                src={imgUrl}
+                alt={name}
+              />
             </Link>
             <p className="font-normal text-[20px] leading-[30px] pt-6 pb-1">
               {name}

@@ -11,18 +11,19 @@ const SignPage = () => {
           <h1 className="font-normal text-[36px] leading-[50px] pt-3 ">
             Coffee Updates
           </h1>
-          <div className="pt-6">
+          <div className=" w-[90%]  flex flex-col mt-6 lg:flex md:flex  gap-y-5 text-center   ">
             <input
               style={{
                 backgroundColor: "transparent",
-                width: "400px",
+                width: "100%",
                 padding: "10px 10px",
                 textTransform: "uppercase",
-                border: "1px solid #2F303E",
+                border: "1px solid gray",
+                borderRadius: "4px",
               }}
               placeholder="customer@coffeestyle.io"
             />
-            <button className="font-normal text-[12px] leading-[18px] tracking-[2px] uppercase bg-[white] text-[black] py-[13px] px-[25px]  ">
+            <button className=" rounded-sm font-normal text-[12px] leading-[18px] tracking-[2px] uppercase bg-[white] text-[black] py-[13px] px-[25px]  ">
               subscribe
             </button>
           </div>
