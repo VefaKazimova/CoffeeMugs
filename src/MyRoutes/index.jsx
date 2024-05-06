@@ -6,6 +6,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import StyleGuide from "../pages/StyleGuide";
 import SinglePage from "../pages/SinglePage";
+import Basket from "../pages/Basket";
 
 const MyRoutes = [
   {
@@ -49,6 +50,12 @@ const MyRoutes = [
     path: "/singlepage/:sId",
     element: <SinglePage />,
     title: "Single Page",
+  },
+  {
+    id: 8,
+    path: "/basket",
+    element: <Basket />,
+    title: "Basket",
   },
 ];
 export default MyRoutes;

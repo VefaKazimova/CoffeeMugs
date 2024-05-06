@@ -4,8 +4,8 @@ import MobileBar from "../MobileBar";
 const Header = () => {
   return (
     <>
-      <div className="container mx-auto pt-[2%] px-[3%]  pb-[3%] flex items-center justify-around ">
-        <div className="flex justify-around items-center">
+      <div className="container mx-auto pt-[2%] px-[8%] md:px-[5%] lg:px-[8%]  pb-[3%] flex  justify-around ">
+        <div className="flex justify-between  w-full ">
           <NavLink to="/">
             <img className="w-[112px] h-[24px]" src="/Header/Logo.svg" alt="" />
           </NavLink>
@@ -48,10 +48,10 @@ const Header = () => {
             className="font-medium  lg:text-[12px] md:text-[8px] leading-[18px] tracking-[2px]"
             to="/styleguide"
           >
-            Style Guide
+            StyleGuide
           </NavLink>
           <NavLink
-            to="/styleguide"
+            to="/basket"
             className="font-medium  lg:text-[12px] md:text-[8px] leading-[18px] tracking-[2px]"
           >
             <div className="flex items-center  justify-center gap-[8px]">

@@ -45,7 +45,7 @@ const Products = () => {
       <h5 className="font-normal text-[12px] leading-[18px] tracking-[2px] uppercase pt-[6%] pb-[4%]">
         More Products
       </h5>
-      <div className="flex justify-center gap-5 mb-8">
+      <div className="flex flex-wrap w-[60%] md:flex-nowrap md:w-auto lg:flex-nowrap lg:w-auto justify-center gap-5 mb-8">
         <input
           type="text"
           placeholder="Search products..."

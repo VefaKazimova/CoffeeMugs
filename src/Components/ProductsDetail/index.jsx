@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
@@ -16,12 +15,15 @@ const ProductsDetail = () => {
 
   return (
     <>
-      <div className="container mx-auto px-[15%]">
-        <div key={products?.id} className="flex justify-center mt-10  gap-6">
-          <div className="w-full h-[400px]">
-            <img className="h-full w-full " src={products?.imgUrl} />
+      <div className="container  ">
+        <div
+          key={products?.id}
+          className="flex justify-center   flex-wrap mt-10 gap-8 "
+        >
+          <div>
+            <img className="lg:w-50% h-[300px]" src={products?.imgUrl} />
           </div>
-          <div className="w-full mt-[6%]">
+          <div>
             <p className="font-normal text-[32px] leading-[30px] mb-2 ">
               {products?.name}
             </p>

@@ -7,6 +7,7 @@ import Products from "../../Components/Products";
 import CoffeeMagazine from "../../Components/CoffeeMagazine";
 import SignPage from "../../Components/SignPage";
 import Footer from "../../Components/Footer";
+import Stories from "../../Components/Stories";
 const Home = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const Home = () => {
       <FeaturedMugs />
       <Products />
       <CoffeeMagazine />
+      <Stories />
       <SignPage />
       <Footer />
     </div>
