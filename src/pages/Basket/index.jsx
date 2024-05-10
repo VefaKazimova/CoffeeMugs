@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "../../Components/Header";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { CiCirclePlus } from "react-icons/ci";
@@ -7,9 +7,9 @@ import { CiCircleMinus } from "react-icons/ci";
 import NotFound from "../../Components/NotFound";
 
 const Basket = () => {
-  const [values, setValues] = useState(useSelector((state) => state.baskets));
+  const values = useSelector((state) => state.baskets);
+  const dispatch = useDispatch();
   const [quantities, setQuantities] = useState({});
-  const [cartItemCount, setCartItemCount] = useState(values.length);
 
   const calculateTotal = (price, quantity) => {
     return price * quantity;
@@ -20,7 +20,6 @@ const Basket = () => {
       ...prevQuantities,
       [id]: (prevQuantities[id] || 0) + 1,
     }));
-    setCartItemCount((prevCount) => prevCount + 1);
   };
 
   const handleDecrement = (id) => {
@@ -29,22 +28,7 @@ const Basket = () => {
         ...prevQuantities,
         [id]: prevQuantities[id] - 1,
       }));
-      setCartItemCount((prevCount) => prevCount - 1);
     }
-  };
-
-  const handleRemove = (id) => {
-    setValues(values.filter((item) => item.id !== id));
-
-    // Sepetteki ürün sayısını güncelle
-    setCartItemCount((prevCount) => prevCount - 1);
-
-    // Eğer miktarları da sıfırlamak isterseniz:
-    setQuantities((prevQuantities) => {
-      const newQuantities = { ...prevQuantities };
-      delete newQuantities[id];
-      return newQuantities;
-    });
   };
 
   if (values.length === 0) {
@@ -132,7 +116,7 @@ const Basket = () => {
                       </button>
                     </div>
                     <div>
-                      <span>{quantities[id] || 0}</span>
+                      <span>{quantities[id] || 1}</span>
                     </div>
                     <div>
                       <button onClick={() => handleDecrement(id)}>
@@ -143,15 +127,16 @@ const Basket = () => {
                 </td>
 
                 <td className="px-6 py-4 ">
-                  <div className="text-sm text-gray-900">
-                    {calculateTotal(price, quantities[id] || 0)}
+                  <div
+                    before="$"
+                    after="USD"
+                    className="text-sm text-gray-900 before:content-[attr(before)] after:content-[attr(after)] after:m-1 before:mr-1"
+                  >
+                    {calculateTotal(price, quantities[id] || 1)}
                   </div>
                 </td>
                 <td className="px-6 py-4   ">
-                  <button
-                    className="text-red-700 hover:text-red-900"
-                    onClick={() => handleRemove(id)}
-                  >
+                  <button className="text-red-700 hover:text-red-900">
                     <FaRegTrashAlt />
                   </button>
                 </td>
