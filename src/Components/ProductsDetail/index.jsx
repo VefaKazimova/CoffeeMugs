@@ -35,9 +35,6 @@ const ProductsDetail = () => {
             <p className="font-normal text-[25px] leading-[28px]  mt-5 ">
               {products?.price}
             </p>
-            <button className="bg-black rounded-md py-[10px] px-[30px] mt-[10%] text-white font-bold  text-[15px] leading-[18px] tracking-[2px] uppercase">
-              Shop
-            </button>
           </div>
         </div>
       </div>
