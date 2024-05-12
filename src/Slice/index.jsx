@@ -9,9 +9,9 @@ const Slice = createSlice({
   reducers: {
     incremented: (state, action) => {
       state.value++;
-      const addProduct = state.baskets.find((prod) => {
-        prod.id === action.payload.id;
-      });
+      const addProduct = state.baskets.find(
+        (prod) => prod.id === action.payload.id
+      );
       if (addProduct) {
         addProduct.count++;
       } else {
@@ -20,13 +20,16 @@ const Slice = createSlice({
       }
     },
     decremented: (state, action) => {
-      state.baskets -= action.payload;
-      state.value--;
+      const index = state.baskets.findIndex(
+        (prod) => prod.id === action.payload.id
+      );
+      if (index !== -1) {
+        state.baskets.splice(index, 1);
+        state.value--;
+      }
     },
   },
 });
 export const { incremented, decremented } = Slice.actions;
-export const selectbasket = (state) => {
-  state.baskets;
-};
+export const selectbasket = (state) => state.basket.baskets;
 export default Slice.reducer;

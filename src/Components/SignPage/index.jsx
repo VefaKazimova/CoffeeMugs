@@ -1,23 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 
 const SignPage = () => {
+  const form = useRef();
   const sendMessage = (e) => {
     e.preventDefault();
 
-    const message = e.target.message.value;
-    const serviceID = "service_pz8bpz2";
-    const templateID = "template_0i5nqww";
-    const userID = "YspO9pltGdfCMG3FL";
-
-    emailjs.sendForm(serviceID, templateID, e.target, userID).then(
-      (result) => {
-        console.log("Email sent successfully:", result.text);
-      },
-      (error) => {
-        console.error("Error sending email:", error.text);
-      }
-    );
+    emailjs
+      .sendForm(
+        "service_pz8bpz2",
+        "template_0i5nqww",
+        form.current,
+        "YspO9pltGdfCMG3FL"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -31,9 +35,39 @@ const SignPage = () => {
             Coffee Updates
           </h1>
           <form
+            ref={form}
             onSubmit={sendMessage}
             className="w-[90%] flex flex-col mt-6 lg:flex md:flex gap-y-5 text-center"
           >
+            <label>Name</label>
+            <input
+              name="message"
+              type="text"
+              style={{
+                backgroundColor: "transparent",
+                width: "100%",
+                padding: "10px 10px",
+                textTransform: "uppercase",
+                border: "1px solid gray",
+                borderRadius: "4px",
+              }}
+              placeholder="Enter your message here"
+            />
+            <label>Email</label>
+            <input
+              name="message"
+              type="email"
+              style={{
+                backgroundColor: "transparent",
+                width: "100%",
+                padding: "10px 10px",
+                textTransform: "uppercase",
+                border: "1px solid gray",
+                borderRadius: "4px",
+              }}
+              placeholder="Enter your message here"
+            />
+            <label>Message</label>
             <input
               name="message"
               type="text"
