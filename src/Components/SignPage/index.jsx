@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const SignPage = () => {
   const form = useRef();
@@ -7,12 +7,9 @@ const SignPage = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_pz8bpz2",
-        "template_0i5nqww",
-        form.current,
-        "YspO9pltGdfCMG3FL"
-      )
+      .sendForm("service_pz8bpz2", "template_0i5nqww", form.current, {
+        publicKey: "etrxbw7cXmKXvrtCZ",
+      })
       .then(
         (result) => {
           console.log(result.text);
@@ -41,13 +38,12 @@ const SignPage = () => {
           >
             <label>Name</label>
             <input
-              name="message"
+              name="name"
               type="text"
               style={{
                 backgroundColor: "transparent",
                 width: "100%",
                 padding: "10px 10px",
-                textTransform: "uppercase",
                 border: "1px solid gray",
                 borderRadius: "4px",
               }}
@@ -55,13 +51,12 @@ const SignPage = () => {
             />
             <label>Email</label>
             <input
-              name="message"
+              name="email"
               type="email"
               style={{
                 backgroundColor: "transparent",
                 width: "100%",
                 padding: "10px 10px",
-                textTransform: "uppercase",
                 border: "1px solid gray",
                 borderRadius: "4px",
               }}
@@ -75,7 +70,6 @@ const SignPage = () => {
                 backgroundColor: "transparent",
                 width: "100%",
                 padding: "10px 10px",
-                textTransform: "uppercase",
                 border: "1px solid gray",
                 borderRadius: "4px",
               }}

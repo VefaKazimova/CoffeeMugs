@@ -16,7 +16,6 @@ const Products = () => {
     });
   }, []);
 
-  const values = useSelector((state) => state);
   const addToCard = ({ id, name, imgUrl, price }) => {
     dispatch(
       incremented({

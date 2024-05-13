@@ -10,11 +10,7 @@ import { decremented } from "../../Slice";
 const Basket = () => {
   const values = useSelector((state) => state.baskets);
   const dispatch = useDispatch();
-  const [quantities, setQuantities] = useState({});
 
-  const calculateTotal = (price, quantity) => {
-    return price * quantity;
-  };
   const removeToCard = ({ id, name, imgUrl, price }) => {
     dispatch(
       decremented({
@@ -25,21 +21,6 @@ const Basket = () => {
       })
     );
     console.log(removeToCard);
-  };
-  const handleIncrement = (id) => {
-    setQuantities((prevQuantities) => ({
-      ...prevQuantities,
-      [id]: (prevQuantities[id] || 0) + 1,
-    }));
-  };
-
-  const handleDecrement = (id) => {
-    if (quantities[id] > 0) {
-      setQuantities((prevQuantities) => ({
-        ...prevQuantities,
-        [id]: prevQuantities[id] - 1,
-      }));
-    }
   };
 
   if (values.length === 0) {
@@ -56,7 +37,7 @@ const Basket = () => {
       <Header />
       <div className="flex justify-center items-center">
         <table className="w-[90%] mt-6">
-          <thead className="bg-gray-50">
+          <thead className="bg-gray-50 ">
             <tr>
               <th
                 scope="col"
@@ -125,15 +106,15 @@ const Basket = () => {
                   <td className="px-6 py-4 ">
                     <div className="text-sm text-gray-900 flex items-center gap-5">
                       <div>
-                        <button onClick={() => handleIncrement(id)}>
+                        <button>
                           <CiCirclePlus />
                         </button>
                       </div>
                       <div>
-                        <span>{quantities[id] || 1}</span>
+                        <span>1</span>
                       </div>
                       <div>
-                        <button onClick={() => handleDecrement(id)}>
+                        <button>
                           <CiCircleMinus />
                         </button>
                       </div>
@@ -146,7 +127,7 @@ const Basket = () => {
                       after="USD"
                       className="text-sm text-gray-900 before:content-[attr(before)] after:content-[attr(after)] after:m-1 before:mr-1"
                     >
-                      {calculateTotal(price, quantities[id] || 1)}
+                      {price}
                     </div>
                   </td>
                   <td className="px-6 py-4   ">

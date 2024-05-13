@@ -2,14 +2,14 @@
   "products": [
     {
       "id": 1,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/56af/45b3/90252a97a0ba155a2c03d92e00d903cd?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=O1ihJvPVLyo3UUlTXc6LLytZwiByLw4UCMFjavDV9RQdOJPETxBkHsJhR0OzpI6SPhCxajEdIYuT-WrUAtzbU4UqEgk3dVdeyKoXWWpBBLDLWkxWIFOkmy0TwX76tS1WxmvmAaAiADnzDtRXFdPvpj7QVYdmqTdEPFV3~3mcK5lgFXh0YWpNuoYnMhSsmC-wupQBP31xeMKhgL3iDVvjiiw9n~BC7VofnDDVzxAuW6~6eFu702yTrA36zjRJoMGiHcwcPlTGBdZV9qNpv688FZHQFBz3Sk51PcZYUaz0xqK1WEIOlqnVzXSUVokGARihu6rUKucGkErYqTMCZcaMNQ__",
+      "imgUrl": "./Products/PinkPremiumCeramic.svg",
       "name": "Pink Premium Ceramic",
       "description": "A wonderful coffee to work with, its almond and caramel notes are perfectly balanced by the bright, fruity yum of Los Ancestros.",
       "price": "99.00 "
     },
     {
       "id": 2,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/aa53/1213/7f9583f58cbc2d39be983ec94dc9b3f8?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=T3n7TAqUL~fwzNG9FjtsZeIm3Mtp1E0rwHleXg0~bntD5Mu0CfS0XHvmNRwKq1IfYhFmB0KlOf-YDRVareJ2PH3IBzLfIz8V6ANLyWLH9DEWOGDjw4JXS3-uMvLQz5aCrMKGkW2YJGpw0r7MVpJP8mSGjeErK7PPTHYsea9p2Fm~9UJycMZf5uFhQ9shjl2GXV95bQfXsFkXhGbhem8QZjlDAIkbldQ9pd~Iqzgr19pZhFGM1RtZb5MGg8j9EwwD-za9bmS51TrpGgEYRU-ceJW6tYF9qUIUcb3Pv~JNQ5iDggTsQ9BIkv3kSPZUu4yGgI79S0wDfGyQcWUMlYQZbA__",
+      "imgUrl": "./Products/GoldenDesignersMug.svg",
       "name": "Golden Designers Mug",
       "description": "Sweet, syrupy and delicious with notes of chocolate-covered cherry and blueberry.",
       "price": "50.00 ",
@@ -17,63 +17,63 @@
     },
     {
       "id": 3,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/dae0/2077/d8aea1e539d53858f11c50bb45af3b74?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IhAjYdtlShEH6S7obKFfw1MdDke~iaMkQZuvM7j4ckNv3VWzIk28PeRlmtH0A5BIjd0mZXeY99BpvAX-J4wlGGlqIabZs7G5x-ceainlpxzWgUbK-OiuNStnr8gAK9MSArAjtcEHFDWj4jfDFoIi40G6-LiPIMBnGJIeqwlkx~zECUlY8X8JrjawVNFeowxEW1tPTWoBDFse2U57klfiCfVxfJ1MSCE9xi2yBRI-2aJKZD3lGlVfIbS~oAvkdIWTZ3TJdA3mRMYDYgbY4dRotBw5-pCNcV-G~CsbRm-mrwyeu9gTkWJdoKCX7lEMISr~scueUQWOY0pFpBfWWBeCJA__",
+      "imgUrl": "./Products/RedLoveCup.svg",
       "description": "Red apple flows into delightful milk chocolate and orange notes that goes dreamily with, or without milk.",
       "name": "Red Love Cup",
       "price": "37.00 "
     },
     {
       "id": 4,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/d7a0/e379/5d7ce4109362068479fb06775a6a4443?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ogodZoaWGht2-ofbojsgVvRwrtV9d21htXQMj2u0pvTbBQqGyL-dR554n~Z-6cRaO7-eB71qVwFj-JcrhKoE-ZlalF3psphpzPRPXwPFAjMv~QrrRGOETRg8lgsNZ2Tnlu6LMnsKA1Wk9aeAClU2QReRhQXh-~Xsc1ngiFBNUum0nno8Ns~~Yo8eiQncZwITnLvJo6w-gdYbvONJj8gkq6LXWZQYXvZ2h~VF-l~ZpTYtoC9mi~ZR80HVbbTfMfQWja576GoUJHEuAl6iktsM14lzRZjz49UyVzL~Ep9dp3tR8qcWzcWRg9QyizgnBNEBmauTkt4vUOMtd4mdNsc~tQ__",
+      "imgUrl": "./Products/BlackTeaCup.svg",
       "name": "Black Tea Cup",
       "price": "29.00 ",
       "description": "Best enjoyed all day every day, expect a creamy pecan texture sprinkled with bits of red grape and fig."
     },
     {
       "id": 5,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/3657/ab2b/a3c67f07b75693cd14d64d5f494dda1a?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OVryF6FhmgpajSQpfAvJaLWX2cF8NZGUsrogvMcgeKjud~6uqxPh~69fBIprL8OAWxWlAY0JZlrc8rOqBWh9WxIwRW7qFEFFhWNAA76hAHQRhfalbjg-4N0tELZaOPuZ87zAgFlK5-XXxGKHhANBaLbOYTAKLUOQgU2J0fRyR6sw1XfkFC8Om32JibcdGyZhHuUhWl~eG20WJ9yhNz1WGJCXJX3fXYUl81D5Bo6dQV6Z~KAlWo9spSCvAXyB0PJ7RXpEcHi2GCFMMJVa93xOLBgiHxRU1xI1kEsDhoMekUb~mUviif-D3-AYL~JGHJrEWiW5fiSdyc7UWBxHdGx6xA__",
+      "imgUrl": "./Products/B&WEssentialsMug.svg",
       "name": "B&W Essentials Mug",
       "price": "19.00 ",
       "description": "Fresh, juicy and oh so delightful Aricha is an Ethiopian must-taste."
     },
     {
       "id": 6,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/f27a/7997/6e5e571053b86d44bb1e8c1fe584aac4?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NjHC16wSbK2A5rPLaOQyNWgSaeuzQl6UQOPoVDATwvFDxLQ~zQJu6AEUr4o0FVXwJbxrMQIJDGLZvhBofsDPgFeUnkjgN7SB5qRD979S7xYMFIkK6mp-5dmcKFg67LHKt8bStDbL18co~rE2MeVInVI6ggD1LSN~rIPH373f5cUppihzKKscQhlTABeBLzcvZWxeWmbyG8RAKkmpR5-22c1lXAftBAyf-1aMPfutAheveZoDhN4Vn6oKdG7-9-TnlbfYE4qsQNUoRALJjTHDzPje0EziSodDzNyklav8oVa6Qt1uCLfqS5j0j2aAHrodCkAuBfh6kRSiraFIk6AAPg__",
+      "imgUrl": "./Products/WinterStyleMug.svg",
       "name": "Winter Style Mug",
       "price": "25.00 ",
       "description": "Delightfully balanced, apple and macadamia notes are highlighted by a honeysuckle sweetness."
     },
     {
       "id": 7,
-      "imgUrl": " https://s3-alpha-sig.figma.com/img/479d/7900/bfbe51c3a5bd040c9cb02b6fb650f395?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XehMy1cFppuFK5nyn5J16XY2R5beZfKrLdRqObnGMS70j5ACcckIYy1Zc7svGBxNHWkWp7ku62roXfflor7KPSzkG9yHpkU9v-TlxGA8Y6rW6iNO19MWxtqdgnje-HtAU749pOroShIP3q4EzqgJP4meK7TZ~4IAcRLzW47DnEr0tzvo2c2hXXankUwmIvgKEEXV7irUQ8BawhH-qudbMZbWkvNOU2wzpw1cnqp7B0wbVk6MSG9AWvjeLWPdIArhzaFQyedrr3HFHyGUNgK~btwvyG6AWwpP8IuXQcJ7CN4H5Yb1~mgyT5K3ibWBe9BKCK67Eo8UMbvDsYPXGoJrvA__",
+      "imgUrl": "./Products/CeramicTea.svg",
       "name": "Ceramic Tea",
       "price": "46.00 ",
       "description": "Delightful all the way through, peach swims in caramel and custard."
     },
     {
       "id": 8,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/196e/42d8/1b94db07902200695396e559b9c69275?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Y5jDkOSqXZzCVLuJKe~rgbM~JIPhILA8faoVQdL0XkPouOaY1Q3LV29lPwOlaQDmOy9Rrg6dUt~VOW9r80mvFpfP-8pXmzcyA868HHTOodnRI1fvmo~F3ANV2TR1oVS~r7uP30HSExem0rj-aSPg1L5SfBK2bLgkelYz9EGpuJ3xMl6n-Km-nRZGXcgQGZcUZUqbPepqzNQW~fr4QTPy7RvtddskcCS7jmzJxqPFO5ikvFjMvmbyg3Gro~D8a~PIhJXkUm07NNB5G20UvuZKYgXtjSARuFRaA9xkNpv9QJLtaaPxnTOlicHzIsYDypYpx6GrtBPu4fUksKfHAdbWyw__",
+      "imgUrl": "./Products/NoHandleBarCup.svg",
       "name": "No Handle Bar Cup",
       "price": "34.00 ",
       "description": "Ranking high on our must-try list is La Bolsa from Guatemala."
     },
     {
       "id": 9,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/dd1a/aca2/19396021be533f67584c0e1add4e5239?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gKiazBOC3E3K2hyh-5MIu0In-zOuwfSWixkkTTzEiejl~elZE05TRe6GbjhMucykACPFTjOsMde7N9~Lxf81TP62UFQhKk5J5NZ8nh6ccIrziQcTP~F78VaCUwJbqVrRUzo2tJ6cAGYgVHwT0-XXdCcqnIVHGNChsfCRXGNg2YUEUXQMVfe0JXFoWmY6lVOI4JUKqT1SE9VOCTI0R2BiUbxI7HHUZqUaydWVAb~1HLh2rJLelWT4gkmN6m~S0c1bNvy2su9Iw7VTV3TLdRxnSXxiTUoCW2gTIxzdoAGKuyYEmHpsnanmliXu0ANVzRdczfYE8~fg8sVQiK98N831DA__",
+      "imgUrl": "./Products/EspressoCup.svg",
       "name": "Espresso Cup by Mugs.co",
       "price": "25.00 ",
       "description": "Delightfully balanced, apple and macadamia notes are highlighted by a honeysuckle sweetness."
     },
     {
       "id": 10,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/56af/45b3/90252a97a0ba155a2c03d92e00d903cd?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=O1ihJvPVLyo3UUlTXc6LLytZwiByLw4UCMFjavDV9RQdOJPETxBkHsJhR0OzpI6SPhCxajEdIYuT-WrUAtzbU4UqEgk3dVdeyKoXWWpBBLDLWkxWIFOkmy0TwX76tS1WxmvmAaAiADnzDtRXFdPvpj7QVYdmqTdEPFV3~3mcK5lgFXh0YWpNuoYnMhSsmC-wupQBP31xeMKhgL3iDVvjiiw9n~BC7VofnDDVzxAuW6~6eFu702yTrA36zjRJoMGiHcwcPlTGBdZV9qNpv688FZHQFBz3Sk51PcZYUaz0xqK1WEIOlqnVzXSUVokGARihu6rUKucGkErYqTMCZcaMNQ__",
       "name": "Pink Premium Ceramic",
+      "imgUrl": "./Products/PinkPremiumCeramic.svg",
       "price": "99.00 ",
       "description": "Best enjoyed all day every day, expect a creamy pecan texture sprinkled with bits of red grape and fig."
     },
     {
       "id": 11,
-      "imgUrl": "https://s3-alpha-sig.figma.com/img/c996/c721/8a1a7eb511084566e8075ad418894a07?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AkBntdVLgFsj0jpcw3BgEMMWRfT0-W4G06dhva7JoMKU4PpL5yAAORzQ1Ue2-Re8a4xTGqklfC36bsPFZr85s2SUxasTGX8pfr6faUXkgsYoWMMx~hiLQDuL24HUhvpSTz9qfVy9hqJbgjxnMe3rtTf88z3XDZlStbVpENh~nOjo~qY2DsJLydiOOXOZ4yqpP-g0Bq6a7WyrKjHn98ik902yVHh6VdSUaB3RZRq2esASEuAdCmRlshPbohFhzzbV4-VQ60TiOkg6k5nnXZcvjy9N2JGTyR1M7Wv2~cDVxb98ZNh1Lluy~NdPCKk34y-VZQB79MXvEl1l8WbKv-6KHQ__",
+      "imgUrl": "./Products/SummerDesignerCup.svg",
       "name": "Summer Designer Cup",
       "price": "29.00 ",
       "description": "Red apple flows into delightful milk chocolate and orange notes that goes dreamily with, or without milk."
