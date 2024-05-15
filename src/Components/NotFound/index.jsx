@@ -3,8 +3,8 @@ import { MdOutlineNotListedLocation } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 const NotFound = () => {
   return (
-    <div className="container mx-auto flex  justify-center items-center mt-10  ">
-      <div className="flex flex-col justify-center items-center p-24 border-2 border-red-700 rounded-[50%] ">
+    <div className="container mx-auto flex  justify-center items-center mt-10  md:text-start lg:text-start text-center p-3 ">
+      <div className="flex flex-col justify-center items-center p-[3rem] lg:p-24 md:p-24 border-2 border-red-700 rounded-[50%]  ">
         <div>
           <MdOutlineNotListedLocation className="text-[100px] text-red-700" />
         </div>

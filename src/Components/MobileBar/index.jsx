@@ -79,7 +79,7 @@ const MobileBar = () => {
                   Contact
                 </NavLink>
                 <NavLink
-                  to="/styleguide"
+                  to="/basket"
                   className="font-medium  lg:text-[12px] md:text-[8px] leading-[18px] "
                 >
                   <div className=" hover:text-secondry flex  gap-3 transform translate-x-0 duration-300 hover:scale-105">

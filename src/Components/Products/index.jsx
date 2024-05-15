@@ -94,7 +94,11 @@ const Products = () => {
               <p className="font-normal text-[20px] leading-[30px] pt-6 pb-1">
                 {name}
               </p>
-              <p className="font-normal text-[16px] leading-[28px] mb-4 ">
+              <p
+                before="$"
+                after="USD"
+                className="font-normal text-[16px] leading-[28px] mb-4  before:content-[attr(before)] after:content-[attr(after)] after:m-1 "
+              >
                 {price}
               </p>
               <button

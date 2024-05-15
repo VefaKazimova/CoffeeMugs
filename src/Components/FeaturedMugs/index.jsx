@@ -46,10 +46,18 @@ const FeaturedMugs = () => {
                 {name}
               </h1>
               <div className="flex gap-5 first-line:items-center text-center justify-center">
-                <span className="font-normal text-[19px] leading-[32px]  text-[#A25F4B]">
+                <span
+                  before="$"
+                  after="USD"
+                  className="font-normal text-[16px] leading-[32px]  text-[#A25F4B]  before:content-[attr(before)] after:content-[attr(after)] after:m-1"
+                >
                   {lastPrice}
                 </span>
-                <span className="font-normal text-[16px] leading-[28px]  text-[#1D1F2E] ">
+                <span
+                  before="$"
+                  after="USD"
+                  className="  before:content-[attr(before)] after:content-[attr(after)] after:m-1 font-normal text-[16px] leading-[32px]  text-[#1D1F2E] "
+                >
                   {price}
                 </span>
               </div>

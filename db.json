@@ -5,7 +5,8 @@
       "imgUrl": "/Products/PinkPremiumCeramic.svg",
       "name": "Pink Premium Ceramic",
       "description": "A wonderful coffee to work with, its almond and caramel notes are perfectly balanced by the bright, fruity yum of Los Ancestros.",
-      "price": "99.00 "
+      "price": "99.00 ",
+      "lastPrice": "98.00 "
     },
     {
       "id": "2",

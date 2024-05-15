@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../../Components/Header";
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -6,33 +6,23 @@ import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import NotFound from "../../Components/NotFound";
 import { decremented, incremented, removeProduct } from "../../Slice";
+import { selectbasket, selectSubtotal } from "../../Slice";
 
 const Basket = () => {
-  const values = useSelector((state) => state.baskets);
+  const values = useSelector(selectbasket);
+  const subtotal = useSelector(selectSubtotal);
   const dispatch = useDispatch();
 
   const removeToCard = ({ id }) => {
-    dispatch(
-      decremented({
-        id,
-      })
-    );
+    dispatch(decremented({ id }));
   };
 
   const _removeProduct = ({ id }) => {
-    dispatch(
-      removeProduct({
-        id,
-      })
-    );
+    dispatch(removeProduct({ id }));
   };
 
   const addToCard = ({ id }) => {
-    dispatch(
-      incremented({
-        id,
-      })
-    );
+    dispatch(incremented({ id }));
   };
 
   if (values.length === 0) {
@@ -48,7 +38,7 @@ const Basket = () => {
     <div>
       <Header />
       <div className="flex justify-center items-center">
-        <table className="w-[90%] mt-6">
+        <table className=" w-[50%]  lg:w-[90%] md:w-[60%] mt-6 ">
           <thead className="bg-gray-50 ">
             <tr>
               <th
@@ -80,7 +70,7 @@ const Basket = () => {
                 scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
-                Subtotal
+                Total
               </th>
               <th
                 scope="col"
@@ -113,7 +103,13 @@ const Basket = () => {
                     </div>
                   </td>
                   <td className="px-6 py-4 ">
-                    <div className="text-sm text-gray-900">{price}</div>
+                    <div
+                      before="$"
+                      after="USD"
+                      className="  before:content-[attr(before)] after:content-[attr(after)] after:m-1 text-sm text-gray-900"
+                    >
+                      {price}
+                    </div>
                   </td>
                   <td className="px-6 py-4 ">
                     <div className="text-sm text-gray-900 flex items-center gap-5">
@@ -150,7 +146,7 @@ const Basket = () => {
                       after="USD"
                       className="text-sm text-gray-900 before:content-[attr(before)] after:content-[attr(after)] after:m-1 before:mr-1"
                     >
-                      {price}
+                      {price * count}
                     </div>
                   </td>
                   <td className="px-6 py-4   ">
@@ -168,6 +164,18 @@ const Basket = () => {
             })}
           </tbody>
         </table>
+      </div>
+      <div className="flex justify-end mt-6 pr-[6rem]">
+        <div className="border-2 border-gray-400 p-2">
+          <span className="font-bold mr-1">Subtotal:</span>
+          <span
+            before="$"
+            after="USD"
+            className=" before:content-[attr(before)] after:content-[attr(after)] after:m-1 "
+          >
+            {subtotal}
+          </span>
+        </div>
       </div>
     </div>
   );

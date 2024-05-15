@@ -31,7 +31,11 @@ const ProductsDetail = () => {
             <p className="font-normal text-[23px] leading-[32px]   mt-6 text-gray-500  w-[340px]">
               {products?.description}
             </p>
-            <p className="font-normal text-[25px] leading-[28px]  mt-5 ">
+            <p
+              before="$"
+              after="USD"
+              className="font-normal text-[25px] leading-[28px]  mt-5  before:content-[attr(before)] after:content-[attr(after)] after:m-1 before:mr-1 "
+            >
               {products?.price}
             </p>
           </div>
