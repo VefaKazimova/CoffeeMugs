@@ -43,13 +43,18 @@ const Slice = createSlice({
       state.subtotal = state.baskets.reduce((total, product) => {
         return total + product.price * product.count;
       }, 0);
+      localStorage.setItem("baskets", JSON.stringify(state.baskets));
 
       toast.error("Product removed from basket!");
+    },
+    calculateSubtotal: (state) => {
+      state.subtotal = state.baskets.reduce((total, product) => {
+        return total + product.price * product.count;
+      }, 0);
     },
   },
 });
 
-export const { incremented, decremented, removeProduct } = Slice.actions;
-export const selectbasket = (state) => state.baskets;
-export const selectSubtotal = (state) => state.subtotal;
+export const { incremented, decremented, removeProduct, calculateSubtotal } =
+  Slice.actions;
 export default Slice.reducer;
