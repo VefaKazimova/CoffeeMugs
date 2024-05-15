@@ -27,7 +27,6 @@ const ProductsDetail = () => {
             <p className="font-normal text-[32px] leading-[30px] mb-2 ">
               {products?.name}
             </p>
-
             <div className="border-b-2 text-black border-opacity-30 w-[70%]"></div>
             <p className="font-normal text-[23px] leading-[32px]   mt-6 text-gray-500  w-[340px]">
               {products?.description}

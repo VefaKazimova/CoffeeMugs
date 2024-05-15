@@ -5,22 +5,34 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import NotFound from "../../Components/NotFound";
-import { decremented } from "../../Slice";
+import { decremented, incremented, removeProduct } from "../../Slice";
 
 const Basket = () => {
   const values = useSelector((state) => state.baskets);
   const dispatch = useDispatch();
 
-  const removeToCard = ({ id, name, imgUrl, price }) => {
+  const removeToCard = ({ id }) => {
     dispatch(
       decremented({
         id,
-        name,
-        imgUrl,
-        price,
       })
     );
-    console.log(removeToCard);
+  };
+
+  const _removeProduct = ({ id }) => {
+    dispatch(
+      removeProduct({
+        id,
+      })
+    );
+  };
+
+  const addToCard = ({ id }) => {
+    dispatch(
+      incremented({
+        id,
+      })
+    );
   };
 
   if (values.length === 0) {
@@ -80,7 +92,7 @@ const Basket = () => {
           </thead>
           <tbody className="bg-white ">
             {values.map((prod) => {
-              const { id, imgUrl, name, price } = prod;
+              const { id, imgUrl, name, price, count } = prod;
 
               return (
                 <tr key={id}>
@@ -106,16 +118,27 @@ const Basket = () => {
                   <td className="px-6 py-4 ">
                     <div className="text-sm text-gray-900 flex items-center gap-5">
                       <div>
-                        <button>
+                        <button
+                          onClick={() => {
+                            addToCard(prod);
+                          }}
+                        >
                           <CiCirclePlus />
                         </button>
                       </div>
                       <div>
-                        <span>1</span>
+                        <span>{count}</span>
                       </div>
                       <div>
                         <button>
-                          <CiCircleMinus />
+                          <button
+                            onClick={() => {
+                              removeToCard(prod);
+                            }}
+                            className="text-red-700 hover:text-red-900"
+                          >
+                            <CiCircleMinus />
+                          </button>
                         </button>
                       </div>
                     </div>
@@ -133,7 +156,7 @@ const Basket = () => {
                   <td className="px-6 py-4   ">
                     <button
                       onClick={() => {
-                        removeToCard(prod);
+                        _removeProduct(prod);
                       }}
                       className="text-red-700 hover:text-red-900"
                     >

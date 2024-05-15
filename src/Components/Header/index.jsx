@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import MobileBar from "../MobileBar";
 import { useSelector } from "react-redux";
 const Header = () => {
-  const count = useSelector((state) => state.value);
+  const count = useSelector((state) => state.baskets.length);
   return (
     <>
       <div className="container bg-white mx-auto pt-[2%] px-[6%] md:px-[5%] lg:px-[6%]  pb-[2%] flex  justify-around ">
