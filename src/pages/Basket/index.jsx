@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../../Components/Header";
 import { FaRegTrashAlt } from "react-icons/fa";
@@ -38,7 +38,7 @@ const Basket = () => {
     <div>
       <Header />
       <div className="flex justify-center items-center">
-        <table className=" w-[50%]  lg:w-[90%] md:w-[60%] mt-6 ">
+        <table className="w-[90%]  mt-6 ">
           <thead className="bg-gray-50 ">
             <tr>
               <th

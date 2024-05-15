@@ -1,9 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 const Slice = createSlice({
   name: "basket",
   initialState: {
-    baskets: [],
+    baskets: localStorage.getItem("baskets")
+      ? JSON.parse(localStorage.getItem("baskets"))
+      : [],
     subtotal: 0,
   },
   reducers: {
@@ -11,10 +14,13 @@ const Slice = createSlice({
       const _prod = state.baskets.find((prod) => prod.id === action.payload.id);
       if (_prod) {
         _prod.count++;
+        toast.success("The quantity of the product increased!");
       } else {
         const newProd = { ...action.payload, count: 1 };
         state.baskets.push(newProd);
+        toast.success("Product added to basket!");
       }
+      localStorage.setItem("baskets", JSON.stringify(state.baskets));
       state.subtotal = state.baskets.reduce((total, product) => {
         return total + product.price * product.count;
       }, 0);
@@ -29,12 +35,16 @@ const Slice = createSlice({
       state.subtotal = state.baskets.reduce((total, product) => {
         return total + product.price * product.count;
       }, 0);
+
+      toast.success("The quantity of the product decreased!");
     },
     removeProduct: (state, action) => {
       state.baskets = state.baskets.filter((p) => p.id !== action.payload.id);
       state.subtotal = state.baskets.reduce((total, product) => {
         return total + product.price * product.count;
       }, 0);
+
+      toast.error("Product removed from basket!");
     },
   },
 });
